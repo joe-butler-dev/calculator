@@ -9,7 +9,7 @@ When a button is pressed
   // Got a number, add to temp
   If value is NaN or is .
     add the value to val
-    $("#answer").val(temp.substring(0, 10));
+    display val, which is the substring from 0 - 10 of temp
 
   // Got some symbol other than equals, add temp to our entries
   // then add our current symbol and clear temp
