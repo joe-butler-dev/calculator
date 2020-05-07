@@ -13,37 +13,42 @@
 </head>
 
 <body>
-<!--
-Create a container for the calculator
-Create a container for the header?
-  Give it a title
-  Give it a subtitle
-  Create an inactive input and give it an id (#answer)
-Create a section for the first row, it should contain:
-  AC
-  CE
-  Percent
-  Divide
-Create section for second row
-  7
-  8
-  9
-  x
-Create section for third row
-  4
-  5
-  6
-  -
-Create section for fourth row
-  1
-  2
-  3
-  + - this button should span rows 4 and 5
-Create section for fifth row
-  0
-  .
-  =
--->
+  <main class="container">
+    <div class="header-calculator">
+      <p id="title">Joe's calculator</h1>
+      <p id="subtitle">Quick maf</h2>
+      <input disabled type="text" id="answer">
+    </div>
+    <div class="row">
+      <button class="control">AC</button>
+      <button class="control">CE</button>
+      <button>%</button>
+      <button>÷</button>
+    </div>
+    <div class="row">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>×</button>
+    </div>
+    <div class="row">
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>-</button>
+    </div>
+    <div class="row">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="tall">+</button>
+    </div>
+    <div class="row">
+      <button>0</button>
+      <button>.</button>
+      <button>=</button>
+    </div>
+  </main>
 </body>
 
 </html>
