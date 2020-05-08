@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Joe's Calculator</title>
+  <title>JOE-SIO Calculator</title>
 
   <link rel="stylesheet" href="style.css">
 
@@ -13,40 +13,66 @@
 </head>
 
 <body>
-  <main class="container">
-    <div class="header-calculator">
-      <p id="title">Joe's calculator</h1>
-      <p id="subtitle">Quick maf</h2>
-      <input disabled type="text" id="answer">
-    </div>
-    <div class="row">
-      <button class="control">AC</button>
-      <button class="control">CE</button>
-      <button>%</button>
-      <button>÷</button>
-    </div>
-    <div class="row">
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>×</button>
-    </div>
-    <div class="row">
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>-</button>
-    </div>
-    <div class="row">
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button class="tall">+</button>
-    </div>
-    <div class="row">
-      <button>0</button>
-      <button>.</button>
-      <button>=</button>
+  <main>
+    <div class="centered" id="calculator">
+      <div class="section-watch-top background-black">
+        <div class="header-row-top flex-inline-flex">
+          <div class="header-col">
+            <p id="title">JOE-SIO</p>
+          </div>
+          <div class="header-col flex-inline-block">
+            <p class="subtitle-1">
+              WATER RESIST 300M
+            </p>
+            <p class="subtitle-1">
+              ALARM CHRONO
+            </p>
+          </div>
+          <div class="header-col">
+            <span id="subtitle-2" class="text-yellow">WR</span>
+          </div>
+        </div>
+        <div class="header-row-bottom">
+          <input disabled type="text" id="answer">
+        </div>
+        
+      </div>
+      <div class="section-watch-bottom background-black">
+        <div class="button-row row-1">
+          <button class="control">AC</button>
+          <button class="control">CE</button>
+          <button>%</button>
+          <button class="button-end">÷</button>
+        </div>
+        <hr>
+        <div class="button-row">
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="button-end">×</button>
+        </div>
+        <hr>
+        <div class="button-row">
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="button-end">-</button>
+        </div>
+        <hr>
+        <div class="button-row">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button class="tall button-end">+</button>
+        </div>
+        <hr class="hr-short">
+        <div>
+          <button>0</button>
+          <button>.</button>
+          <button>=</button>
+        </div>
+        <hr>
+      </div>
     </div>
   </main>
 </body>

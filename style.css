@@ -1,24 +1,177 @@
-/*
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Orbitron&display=swap');
 
-Import bourbon extension
+* {
+  box-sizing: border-box;
+}
 
-// Import fonts
+body,
+html {
+  background: rgb(119,111,255);
+  background: linear-gradient(126deg, rgba(119,111,255,1) 0%, rgba(31,236,254,1) 100%);
+}
 
-// Establish custom colour sets as variables
+hr {
+  color: 1px solid white;
+  margin: 4px;
+}
 
-// Set rule set for body and html (page background)
+button {
+  font-family: 'Baloo Tamma 2', cursive;
+  border-radius: 5px;
+  border-top: 2px solid rgb(56,52,43);
+  border-left: 2px solid rgb(13,10,6);
+  border-right: 1px solid rgb(12,9,5);
+  border-bottom: 1px solid rgb(35,33,28);
+  background-color: rgb(18,17,13);
+  color: rgb(226,225,227);
+  width: 40px;
+  height: 20px;
+  margin-right: 13px;
+  line-height: 1.2rem;
+}
 
-// Set ruleset for the calculator container
+button:active {
+  color: rgb(139,136,132);
+  background-color: black;
+  border-color: black;
+}
 
-// Give the calculator curved edges
+button:focus {
+  outline: none;
+}
 
-// Give the calculator some shadows
+.control:active {
+  color: rgb(139, 0, 0);
+  background-color: black;
+}
 
-// Create ruleset for the title
+.button-end {
+  margin-right: 0;
+}
 
-// Create ruleset for the subtitle
+.tall {
+  height: 50px;
+  float: right;
+}
 
-// Create ruleset for the input/screen
+.control {
+  color: rgb(189,89,48);
+}
 
-// Create ruleset for the buttons, including their different states (active, focus, etc.)
+.hr-short {
+  width: 150px;
+}
 
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.background-black {
+  background-color: black
+}
+
+.flex-inline-flex {
+  display: inline-flex;
+}
+
+.flex-inline-block {
+  display: inline-block;
+}
+
+#calculator {
+  height: 350px;
+  width: 270px;
+  border-left: 2px solid rgb(139,136,132);
+  border-top: 3px solid rgb(50,48,36);
+  border-bottom: 2px solid black;
+  background-color: rgb(50,48,36);
+  border-radius: 20px;
+}
+
+#title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    color: rgb(226,225,227)
+}
+
+.subtitle-1{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.5rem;
+    margin: 0.1rem;
+    color: rgb(87,134,189);
+}
+
+#subtitle-2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: rgb(250,221,94);
+}
+
+.section-watch-top {
+  padding: 10px 20px;
+  margin: 4px 8px;
+  border-top: 2px solid rgb(139,136,132);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid rgb(139,136,132);
+}
+
+.section-watch-bottom {
+  padding: 10px 20px;
+  margin: 4px 8px;
+  margin-bottom: 10px;
+  border-top: 2px solid rgb(186,179,172);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom: 1px solid rgb(139,136,132);
+}
+
+.header-row-top {
+  width: 100%;
+  height: 25px;
+  justify-content: space-between;
+  padding: 2px 0px;
+  margin-bottom: 10px;
+}
+
+.header-row-bottom {
+  width: 100%;
+  height: 95px;
+  justify-content: space-between;
+}
+
+.header-col {
+  height: 2rem;
+  vertical-align: auto;
+}
+
+#answer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(200,220,219);
+  border-radius: 5px;
+  border-left: 4px solid rgb(56,52,43);
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(56,52,43);
+}
+
+.break-line {
+  margin: 2px 0px;
+  
+}
+
+.button-row {
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Create ruleset for the buttons, including their different states (active, focus, etc.) */

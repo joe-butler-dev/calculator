@@ -1,8 +1,14 @@
-/*
-Create an array for entries
-Create a variable to track the total
+var entries = [];
+var total = 0; // might need to be an empty string?
 
-Declare a variable for a temp value
+var temp = '' //might need to be a number?
+
+
+
+
+/*
+
+
 When a button is pressed
   Declare val value to take the value of the button pressed and return it as text .text()
 
