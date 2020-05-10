@@ -3,7 +3,12 @@ var total = 0; // might need to be an empty string?
 
 var temp = '' //might need to be a number?
 
+var buttons = document.getElementsByTagName('button');
 
+//figure out why the for loop ain't running
+for (i = 0; i < buttons.length; i++) {
+  console.log(buttons[i]);
+}
 
 
 /*
