@@ -4,6 +4,7 @@ var total = 0;
 var temp = '';
 
 var buttons = document.getElementsByTagName('button');
+var display = document.getElementById('answer');
 
 for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", calculate);
@@ -11,14 +12,19 @@ for (i = 0; i < buttons.length; i++) {
 
 function calculate() {
   let val = this.textContent;
+
+  if (isNaN(val) || val === ".") {
+    val += temp;
+    display.value = val;
+  }
+
+
+
 }
 
 
-
-
 /*
-When a button is pressed
-  Declare val value to take the value of the button pressed and return it as text .text()
+...When a button is pressed
 
   // Got a number, add to temp
   If value is NaN or is .
