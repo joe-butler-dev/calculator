@@ -1,19 +1,22 @@
 var entries = [];
-var total = 0; // might need to be an empty string?
+var total = 0;
 
-var temp = '' //might need to be a number?
+var temp = '';
 
 var buttons = document.getElementsByTagName('button');
 
-//figure out why the for loop ain't running
 for (i = 0; i < buttons.length; i++) {
-  console.log(buttons[i]);
+  buttons[i].addEventListener("click", calculate);
+}
+
+function calculate() {
+  let val = this.textContent;
 }
 
 
+
+
 /*
-
-
 When a button is pressed
   Declare val value to take the value of the button pressed and return it as text .text()
 

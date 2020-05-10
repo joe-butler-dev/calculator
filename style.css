@@ -100,7 +100,7 @@ button:focus {
 
 .subtitle-1{
     font-family: 'Share Tech Mono', monospace;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     margin: 0.1rem;
     color: rgb(87,134,189);
 }
@@ -162,6 +162,10 @@ button:focus {
   border-top: none;
   border-right: none;
   border-bottom: 1px solid rgb(56,52,43);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  padding: 5px 5px;
+  text-align: right;
 }
 
 .break-line {
