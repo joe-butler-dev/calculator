@@ -1,5 +1,4 @@
 var entries = [];
-var total = 0;
 var temp = '';
 
 var buttons = document.getElementsByTagName('button');
@@ -50,9 +49,7 @@ function buttonIsNumberOrDot(val) {
 }
 
 function buttonIsAC() {
-  entries = [];
-  total = 0;
-  temp = '';
+  fullClear();
   display.value = '';
 }
 
@@ -98,8 +95,7 @@ function completeCalculation() {
   }
 
   display.value = nt;
-  entries = [];
-  temp = '';
+  fullClear();
 }
 
 function pushNumberToArray(val) {
@@ -110,4 +106,9 @@ function pushNumberToArray(val) {
 
 function convertToNegative(nt) {
   Math.abs(nt) + '-';
+}
+
+function fullClear() {
+  entries = [];
+  temp = '';
 }
