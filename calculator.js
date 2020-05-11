@@ -37,11 +37,12 @@ function calculate() {
   }
 
   // Change multiply symbol to work with eval
-  else (value === 'x') {
+  else if (val === 'x') {
     entries.push(temp);
     entries.push("*");
     temp = '';
   }
+
 }
 
 
