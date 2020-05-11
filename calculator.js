@@ -14,10 +14,10 @@ function calculate() {
   let val = this.textContent;
 
   if (isNaN(val) || val === ".") {
-    val += temp;
+    temp += val;
+    val = temp.substring(0, 10);
     display.value = val;
   }
-
 
 
 }
