@@ -6,6 +6,7 @@ var temp = '';
 var buttons = document.getElementsByTagName('button');
 var display = document.getElementById('answer');
 
+// Add event handlers for each button and run the calculate function when one is pressed
 for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", calculate);
 }
@@ -13,42 +14,38 @@ for (i = 0; i < buttons.length; i++) {
 function calculate() {
   let val = this.textContent;
 
+  // Got a number, add to temp
   if (isNaN(val) || val === ".") {
     temp += val;
     val = temp.substring(0, 10);
     display.value = val;
   }
 
+  // Got some symbol other than equals, add temp to our entries
+  // then add our current symbol and clear temp
+  else if (val === 'AC') {
+    entries = [];
+    temp = '';
+    total = 0;
+    display.value = '';
+  }
 
+  // Clear last entry
+  else if (val === 'CE') {
+    temp = '';
+    display.value = '';
+  }
+
+  // Change multiply symbol to work with eval
+  else (value === 'x') {
+    entries.push(temp);
+    entries.push("*");
+    temp = '';
+  }
 }
 
 
 /*
-...When a button is pressed
-
-  // Got a number, add to temp
-  If value is NaN or is .
-    add the value to val
-    display val, which is the substring from 0 - 10 of temp
-
-  // Got some symbol other than equals, add temp to our entries
-  // then add our current symbol and clear temp
-  Else if val is AC
-  clear entries array
-  set temp string back to ''
-  set total to 0
-  display value as an emptry string
-
-  // Clear last entry
-  else if val is CE
-  set temp to empty string
-  display value as empty string
-
-  // Change multiply symbol to work with eval
-  else if value is x
-  add temp to the entries array
-  push * to the array
-  set temp to empty string
 
   // Change divide symbol to work with eval
   else if val is divide symbol
