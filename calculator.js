@@ -43,16 +43,17 @@ function calculate() {
     temp = '';
   }
 
+  // Change divide symbol to work with eval
+  else if (val === '÷') {
+    entries.push(temp);
+    entries.push("/");
+    temp = '';
+  }
+
 }
 
 
 /*
-
-  // Change divide symbol to work with eval
-  else if val is divide symbol
-  push the temp value to the entries array
-  push / to the entries array
-  set temp to empty string
 
   // Got the equals sign, perform calculation
   else if val is equals symbol
