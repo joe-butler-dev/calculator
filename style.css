@@ -6,8 +6,8 @@
 
 body,
 html {
-  background: rgb(119,111,255);
-  background: linear-gradient(126deg, rgba(119,111,255,1) 0%, rgba(31,236,254,1) 100%);
+  background: rgb(252,218,233);
+  background: linear-gradient(35deg, rgba(252,218,233,1) 0%, rgba(207,222,240,1) 100%);
 }
 
 hr {
@@ -26,7 +26,7 @@ button {
   color: rgb(226,225,227);
   width: 40px;
   height: 20px;
-  margin-right: 13px;
+  margin-right: 18px;
   line-height: 1.2rem;
 }
 
@@ -51,6 +51,7 @@ button:focus {
 
 .tall {
   height: 50px;
+  margin-right: 2px;
   float: right;
 }
 
@@ -92,23 +93,26 @@ button:focus {
 }
 
 #title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    margin: 0;
-    color: rgb(226,225,227)
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  color: rgb(226,225,227);
+  padding-top: 3px;
 }
 
 .subtitle-1{
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 0.6rem;
-    margin: 0.1rem;
-    color: rgb(87,134,189);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.6rem;
+  margin: 0.1rem;
+  color: rgb(87,134,189);
 }
 
 #subtitle-2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   color: rgb(250,221,94);
+  margin: 0;
+  padding-top: 3px;
 }
 
 .section-watch-top {
@@ -124,7 +128,6 @@ button:focus {
 
 .section-watch-bottom {
   padding: 10px 20px;
-  margin: 4px 8px;
   margin-bottom: 10px;
   border-top: 2px solid rgb(186,179,172);
   border-top-left-radius: 10px;
@@ -177,5 +180,3 @@ button:focus {
   width: 100%;
   justify-content: space-between;
 }
-
-/* Create ruleset for the buttons, including their different states (active, focus, etc.) */
