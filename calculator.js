@@ -7,83 +7,107 @@ var display = document.getElementById('answer');
 
 // Add event handlers for each button and run the calculate function when one is pressed
 for (i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', calculate);
+  buttons[i].addEventListener('click', buttonPressed);
 }
 
-function calculate() {
-  let val = this.textContent;
-  console.log(val);
+function buttonPressed() {
+  var val = this.textContent;
 
-  // Got a number, add to temp
+  // If a number or dot is pressed, add it to temp and display on screen
   if (!isNaN(val) || val === '.') {
-    temp += val;
-    val = temp.substring(0, 10);
-    display.value = val;
+    buttonIsNumberOrDot(val);
+
+    // If AC is pressed, clear everything
+  } else if (val === 'AC') {
+    buttonIsAC();
+
+    // If CE is pressed, clear the current entry
+  } else if (val === 'CE') {
+    buttonIsCE();
+
+    // If multiply symbol is pressed, convert it to a * so it can work during calculation
+  } else if (val === 'x') {
+    buttonIsMultiply();
+
+    // If divide symbol is pressed, convert it to a / so it can work during calculation
+  } else if (val === '÷') {
+    buttonIsDivide();
+
+    // If equals sign is pressed, perform the calculation
+  } else if (val === '=') {
+    completeCalculation();
+
+    // If a number is pressed, add it to the entries array
+  } else {
+    pushNumberToArray(val);
   }
+}
 
-  // Got some symbol other than equals, add temp to our entries
-  // then add our current symbol and clear temp
-  else if (val === 'AC') {
-    entries = [];
-    total = 0;
-    temp = '';
-    display.value = '';
-  }
+function buttonIsNumberOrDot(val) {
+  temp += val;
+  val = temp.substring(0, 10);
+  display.value = val;
+}
 
-  // Clear last entry
-  else if (val === 'CE') {
-    temp = '';
-    display.value = '';
-  }
+function buttonIsAC() {
+  entries = [];
+  total = 0;
+  temp = '';
+  display.value = '';
+}
 
-  // Change multiply symbol to work with eval
-  else if (val === 'x') {
-    entries.push(temp);
-    entries.push('*');
-    temp = '';
-  }
+function buttonIsCE() {
+  temp = '';
+  display.value = '';
+}
 
-  // Change divide symbol to work with eval
-  else if (val === '÷') {
-    entries.push(temp);
-    entries.push('/');
-    temp = '';
-  }
+function buttonIsMultiply() {
+  entries.push(temp);
+  entries.push('*');
+  temp = '';
+}
 
-  // Got the equals sign, perform calculation
-  else if (val === '=') {
-    entries.push(temp);
-    let nt = Number(entries[0]);
+function buttonIsDivide() {
+  entries.push(temp);
+  entries.push('/');
+  temp = '';
+}
 
-    for (j = 0; j < entries.length; j++) {
-      let nextNum = Number(entries[j + 1]);
-      let symbol = entries[j];
+function completeCalculation() {
+  entries.push(temp);
+  let nt = Number(entries[0]);
 
-      if (symbol === '+') {
-        nt += nextNum;
-      } else if (symbol === '-') {
-        nt -= nextNum;
-      } else if (symbol === '*') {
-        nt *= nextNum;
-      } else if (symbol === '/') {
-        nt /= nextNum;
-      }
+  for (j = 0; j < entries.length; j++) {
+    let nextNum = Number(entries[j + 1]);
+    let symbol = entries[j];
+
+    if (symbol === '+') {
+      nt += nextNum;
+    } else if (symbol === '-') {
+      nt -= nextNum;
+    } else if (symbol === '*') {
+      nt *= nextNum;
+    } else if (symbol === '/') {
+      nt /= nextNum;
     }
-
-    // Swap the '-' symbol so text input handles it correctly
-    if (nt < 0) {
-      Math.abs(nt) + '-';
-    }
-
-    display.value = nt;
-    entries = [];
-    temp = '';
   }
 
-  // Push number
-  else {
-    entries.push(temp);
-    entries.push(val);
-    temp = '';
+  // Swap the '-' symbol so text input handles it correctly
+  if (nt < 0) {
+    convertToNegative(nt)
   }
+
+  display.value = nt;
+  entries = [];
+  temp = '';
+}
+
+function pushNumberToArray(val) {
+  entries.push(temp);
+  entries.push(val);
+  temp = '';
+}
+
+function convertToNegative(nt) {
+  Math.abs(nt) + '-';
 }
