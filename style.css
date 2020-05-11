@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Orbitron&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background: rgb(252,218,233);
+  background: linear-gradient(35deg, rgba(252,218,233,1) 0%, rgba(207,222,240,1) 100%);
+}
+
+hr {
+  color: 1px solid white;
+  margin: 4px;
+}
+
+button {
+  font-family: 'Baloo Tamma 2', cursive;
+  border-radius: 5px;
+  border-top: 2px solid rgb(56,52,43);
+  border-left: 2px solid rgb(13,10,6);
+  border-right: 1px solid rgb(12,9,5);
+  border-bottom: 1px solid rgb(35,33,28);
+  background-color: rgb(18,17,13);
+  color: rgb(226,225,227);
+  width: 40px;
+  height: 20px;
+  margin-right: 18px;
+  line-height: 1.2rem;
+}
+
+button:active {
+  color: rgb(139,136,132);
+  background-color: black;
+  border-color: black;
+}
+
+button:focus {
+  outline: none;
+}
+
+.control:active {
+  color: rgb(139, 0, 0);
+  background-color: black;
+}
+
+.button-end {
+  margin-right: 0;
+}
+
+.tall {
+  height: 50px;
+  margin-right: 2px;
+  float: right;
+}
+
+.control {
+  color: rgb(189,89,48);
+}
+
+.hr-short {
+  width: 150px;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.background-black {
+  background-color: black
+}
+
+.flex-inline-flex {
+  display: inline-flex;
+}
+
+.flex-inline-block {
+  display: inline-block;
+}
+
+#calculator {
+  height: 350px;
+  width: 270px;
+  border-left: 2px solid rgb(139,136,132);
+  border-top: 3px solid rgb(50,48,36);
+  border-bottom: 2px solid black;
+  background-color: rgb(50,48,36);
+  border-radius: 20px;
+}
+
+#title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  color: rgb(226,225,227);
+  padding-top: 3px;
+}
+
+.subtitle-1{
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.6rem;
+  margin: 0.1rem;
+  color: rgb(87,134,189);
+}
+
+#subtitle-2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: rgb(250,221,94);
+  margin: 0;
+  padding-top: 3px;
+}
+
+.section-watch-top {
+  padding: 10px 20px;
+  margin: 4px 8px;
+  border-top: 2px solid rgb(139,136,132);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid rgb(139,136,132);
+}
+
+.section-watch-bottom {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-top: 2px solid rgb(186,179,172);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom: 1px solid rgb(139,136,132);
+}
+
+.header-row-top {
+  width: 100%;
+  height: 25px;
+  justify-content: space-between;
+  padding: 2px 0px;
+  margin-bottom: 10px;
+}
+
+.header-row-bottom {
+  width: 100%;
+  height: 95px;
+  justify-content: space-between;
+}
+
+.header-col {
+  height: 2rem;
+  vertical-align: auto;
+}
+
+#answer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(200,220,219);
+  border-radius: 5px;
+  border-left: 4px solid rgb(56,52,43);
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(56,52,43);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  padding: 5px 5px;
+  text-align: right;
+}
+
+.break-line {
+  margin: 2px 0px;
+  
+}
+
+.button-row {
+  width: 100%;
+  justify-content: space-between;
+}
