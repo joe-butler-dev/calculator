@@ -1,9 +1,7 @@
 # Calculator
 
-This is the repository that will hold your files for the calculator challenge.
+A basic calculator inspired by Casio calculator watches.
 
-During this challenge you will:
-1. Fork this repo
-2. Make changes on your own copy
-3. Work through the [Calculator - Challenge](https://github.com/dev-academy-foundations/foundations/blob/master/sprints/sprint-5/stretch-calculator.md) instructions.
-4. Enjoy calculating!
+This was one of our first challenges at [Enspiral Dev Academy](https://devacademy.co.nz/) and was to help us get more familiar with HTML, CSS and JavaScript functions.
+
+![calculator](/readme/calc.png "Calculator")
